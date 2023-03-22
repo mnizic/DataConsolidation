@@ -15,9 +15,6 @@ public class InventoryValueSLWriter implements Writer {
     public void WriteData(String fileName, ExchangeRate exchangeRate) {
         generateData(exchangeRate);
         sortData();
-        for (InventoryValueSL inventoryValueSL : DataRepo.getInstance().inventoryValueSLList) {
-            System.out.println(inventoryValueSL.toString());
-        }
         writeToFile(fileName);
     }
 
